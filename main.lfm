@@ -1,0 +1,154 @@
+object Form1: TForm1
+  Left = 378
+  Height = 224
+  Top = 204
+  Width = 545
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Demos sobre procesos y utilidades externas'
+  ClientHeight = 224
+  ClientWidth = 545
+  ShowHint = True
+  LCLVersion = '1.6.4.0'
+  object b_doc: TButton
+    Left = 456
+    Height = 25
+    Top = 40
+    Width = 72
+    Caption = 'OpenDoc'
+    Enabled = False
+    OnClick = b_docClick
+    TabOrder = 2
+  end
+  object b_web: TButton
+    Left = 456
+    Height = 25
+    Top = 144
+    Width = 72
+    Caption = 'Open URL'
+    OnClick = b_webClick
+    TabOrder = 6
+  end
+  object b_exe: TButton
+    Left = 456
+    Height = 25
+    Top = 95
+    Width = 72
+    Caption = 'EXE'
+    Enabled = False
+    OnClick = b_exeClick
+    TabOrder = 5
+  end
+  object nexe: TLabeledEdit
+    Left = 16
+    Height = 24
+    Top = 96
+    Width = 408
+    EditLabel.AnchorSideLeft.Control = nexe
+    EditLabel.AnchorSideRight.Control = nexe
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = nexe
+    EditLabel.Left = 16
+    EditLabel.Height = 13
+    EditLabel.Top = 80
+    EditLabel.Width = 408
+    EditLabel.Caption = 'Indique nombre del ejecutable (.exe)'
+    EditLabel.ParentColor = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 3
+    TextHint = 'ej. calc.exe / explorer.exe'
+  end
+  object b_exesel: TButton
+    Left = 425
+    Height = 25
+    Top = 95
+    Width = 32
+    Caption = '...'
+    OnClick = b_exeselClick
+    TabOrder = 4
+  end
+  object ndoc: TLabeledEdit
+    Left = 16
+    Height = 24
+    Top = 41
+    Width = 408
+    EditLabel.AnchorSideLeft.Control = ndoc
+    EditLabel.AnchorSideRight.Control = ndoc
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = ndoc
+    EditLabel.Left = 16
+    EditLabel.Height = 13
+    EditLabel.Top = 25
+    EditLabel.Width = 408
+    EditLabel.Caption = 'Seleccione un Documento (.doc,.exe,.pdf)'
+    EditLabel.ParentColor = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+  end
+  object b_docsel: TButton
+    Left = 425
+    Height = 25
+    Top = 40
+    Width = 32
+    Caption = '...'
+    OnClick = b_docselClick
+    TabOrder = 1
+  end
+  object nweb: TLabeledEdit
+    Left = 16
+    Height = 24
+    Top = 145
+    Width = 408
+    EditLabel.AnchorSideLeft.Control = nweb
+    EditLabel.AnchorSideRight.Control = nweb
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = nweb
+    EditLabel.Left = 16
+    EditLabel.Height = 13
+    EditLabel.Top = 129
+    EditLabel.Width = 408
+    EditLabel.Caption = 'Dirección Web:'
+    EditLabel.ParentColor = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 7
+    TextHint = 'ej. www.webscom.net'
+  end
+  object wlink: TECLink
+    Left = 226
+    Height = 13
+    Top = 192
+    Width = 92
+    Caption = 'www.webscom.net'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object open_exe: TOpenDialog
+    Title = 'Selecciona un ejecutable'
+    Options = [ofReadOnly, ofEnableSizing, ofViewDetail]
+    left = 296
+    top = 16
+  end
+end
